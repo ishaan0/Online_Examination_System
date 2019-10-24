@@ -1,0 +1,29 @@
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\bin\Debug\TEST.exe.config
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\bin\Debug\TEST.exe
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\bin\Debug\TEST.pdb
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\obj\Debug\Online_Examination_System.csprojResolveAssemblyReference.cache
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\obj\Debug\TEST.LogInUi.resources
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\obj\Debug\TEST.Properties.Resources.resources
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\obj\Debug\Online_Examination_System.csproj.GenerateResource.Cache
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\obj\Debug\TEST.exe
+C:\Users\mr\Downloads\pp\pp\TEST\TEST\obj\Debug\TEST.pdb
+D:\SD Project\TEST\bin\Debug\TEST.exe.config
+D:\SD Project\TEST\obj\Debug\TEST.exe
+D:\SD Project\TEST\obj\Debug\TEST.pdb
+D:\SD Project\TEST\bin\Debug\TEST.exe
+D:\SD Project\TEST\bin\Debug\TEST.pdb
+D:\SD Project\TEST\obj\Debug\Online_Examination_System.csprojResolveAssemblyReference.cache
+D:\SD Project\TEST\obj\Debug\TEST.LogInUi.resources
+D:\SD Project\TEST\obj\Debug\TEST.Properties.Resources.resources
+D:\SD Project\TEST\obj\Debug\Online_Examination_System.csproj.GenerateResource.Cache
+D:\SD Project\TEST\obj\Debug\TEST.AdminPanelUi.resources
+D:\SD Project\TEST\obj\Debug\TEST.TeacherPanelUi.resources
+D:\SD Project\TEST\obj\Debug\TEST.QuestionPaperUi.resources
+D:\SD Project\TEST\obj\Debug\TEST.StudentAddUi.resources
+D:\SD Project\TEST\obj\Debug\TEST.AnswerSheetUi.resources
+D:\SD Project\TEST\obj\Debug\TEST.ParticipantInfo.resources
+D:\SD Project\TEST\obj\Debug\TEST.StudentPanelUi.resources
+D:\SD Project\TEST\bin\Debug\itextsharp.dll
+D:\SD Project\TEST\bin\Debug\itextsharp.pdfa.dll
+D:\SD Project\TEST\bin\Debug\itextsharp.xtra.dll
+D:\SD Project\TEST\bin\Debug\itextsharp.xml
