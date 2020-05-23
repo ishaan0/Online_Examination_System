@@ -77,7 +77,6 @@ namespace TEST
             if (IsExamEnd())
             {
                 resultShow();
-                return;
             }
             FillUpStudentInfo();
         }
@@ -92,6 +91,13 @@ namespace TEST
             string query = "Select Student_Id,Marks from Student_Master where Teacher_Id='" + ExamTeacherInfo.ExamTeacherId + "'  AND Course_Code= '" + ExamTeacherInfo.ExamCourseCode + "' AND Marks != '-1'";
 
             sqlcon.readDatathroughAdapter(query, table);
+
+            if (table.Rows.Count == 0)
+            {
+                sqlcon.closeConn();
+                resultShow();
+            }
+
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
@@ -160,8 +166,7 @@ namespace TEST
 
         private DateTime GetExamLastTime()
         {
-            //DateTime examEndTime = Convert.ToDateTime(ExamTime);
-            DateTime examEndTime = DateTime.ParseExact(ExamTime, "hh:mm tt", null);
+            DateTime examEndTime = Convert.ToDateTime(ExamTime);
             string examDuration = GetExamDuration();
 
             TimeSpan duration = new TimeSpan(0, (Int32.Parse(examDuration.Substring(0, 2))), (Int32.Parse(examDuration.Substring(3, 2))), 0);
@@ -172,8 +177,7 @@ namespace TEST
 
         private bool IsValidTime(string currentTime, string examTime)
         {
-            // DateTime exmTime = Convert.ToDateTime(examTime);
-            DateTime exmTime = DateTime.ParseExact(examTime, "hh:mm tt", null);
+            DateTime exmTime = Convert.ToDateTime(examTime);
             DateTime endTime = GetExamLastTime();
             DateTime crntTime = DateTime.Now;
 
@@ -192,8 +196,8 @@ namespace TEST
             string date = DateTime.Now.ToString("dd.MM.yyyy");
             string time = DateTime.Now.ToString("hh:mm tt");
 
-            if (DateTime.ParseExact(ExamDate, "dd.MM.yyyy", null) > DateTime.ParseExact(date, "dd.MM.yyyy", null) ||
-                (DateTime.ParseExact(ExamDate, "dd.MM.yyyy", null) == DateTime.ParseExact(date, "dd.MM.yyyy", null) && IsValidTime(time, ExamTime)))
+            if ((Convert.ToDateTime(ExamDate)).Date > (Convert.ToDateTime(date)).Date ||
+                ((Convert.ToDateTime(ExamDate)).Date == (Convert.ToDateTime(date)).Date && IsValidTime(time, ExamTime)))
             {
                 DBAccess sqlcon = new DBAccess();
                 string mark = "0";

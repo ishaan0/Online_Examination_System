@@ -97,8 +97,7 @@ namespace TEST
         }
         private bool IsValidTime(string currentTime, string examTime)
         {
-            //DateTime exmTime = Convert.ToDateTime(examTime);
-            DateTime exmTime = DateTime.ParseExact(examTime, "hh:mm tt", null);
+            DateTime exmTime = Convert.ToDateTime(examTime);
             DateTime endTime = GetExamLastTime();
             DateTime crntTime = DateTime.Now;
            
@@ -114,8 +113,7 @@ namespace TEST
 
         private DateTime GetExamLastTime()
         {
-            //DateTime examEndTime = Convert.ToDateTime(ExamTime);
-            DateTime examEndTime = DateTime.ParseExact(ExamTime, "hh:mm tt", null);
+            DateTime examEndTime = Convert.ToDateTime(ExamTime);
             string examDuration = GetExamDuration();
 
             TimeSpan duration = new TimeSpan(0, (Int32.Parse(examDuration.Substring(0, 2))), (Int32.Parse(examDuration.Substring(3, 2))), 0);
@@ -160,16 +158,12 @@ namespace TEST
         }
         private void loadFunction()
         {
-            // pending ..
-            // format hh:mm tt
-            //Convert.ToDateTime("2.3.4");
             Second = 59;
             SetExamDateTime();
             string date = DateTime.Now.ToString("dd.MM.yyyy");
             string time = DateTime.Now.ToString("hh:mm tt");
 
-            //if ((Convert.ToDateTime(ExamDate)).Date == (Convert.ToDateTime(date)).Date && IsValidTime(time, ExamTime))
-            if(DateTime.ParseExact(ExamDate,"dd.MM.yyyy",null) == DateTime.ParseExact(date, "dd.MM.yyyy", null) && IsValidTime(time, ExamTime))
+            if ((Convert.ToDateTime(ExamDate)).Date == (Convert.ToDateTime(date)).Date && IsValidTime(time, ExamTime))
             {
                 makeEnable();
                 string timeDuration = (GetExamDuration().Substring(0, 5));
